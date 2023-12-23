@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando a idade</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            
+        }
+
+        h1{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+           
+        }
+
+        p#p1{
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+       
+
+        p#p2{
+            position: absolute;
+            top: 38%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        p#p3{
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+                   
+    </style>
+
+</head>
+<body>
+    <h1>Calculando a idade</h1>
+
+    <form action="cadastro.php" method="get"></form>
+
+    <p id="p1">
+        <label for="iano"> Em que ano você nasceu?</label><br>
+        <input type="number" name="ano" id="iano" min="1900" max="2100" oninput="calcIdade()">
+    </p>
+
+    <p id="p2">
+        <label for="iidade">Sua idade: </label>
+        <output id="iidade">0</output>
+
+    </p>
+
+    <p id="p3">
+        <input type="reset" value="Limpar">
+    </p>
+
+    <script>
+        function calcIdade() {
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number (atual) - Number(iano.value)
+        }
+    </script>
+    
+</body>
+</html>
